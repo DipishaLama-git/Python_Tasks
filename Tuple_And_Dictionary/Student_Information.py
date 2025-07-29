@@ -48,4 +48,32 @@ print(merge)
 maximum=max(merge,key=merge.get)
 print(f"Key with maximum value \n{maximum}:{merge[maximum]}")
 
+#count the frequency of each character in string using dictionary
+input_str="paece"
+freq={}
+for char in input_str:
+    if char in freq:
+        freq[char]=freq[char]+1
+    else:
+        freq[char]=1
+
+print(freq)        
 #sort dictionary by its value
+
+performance={
+    "Singing":60,
+    "Painting":30,
+    "Study":80,
+    "Speaking":70,
+    "Writing":100
+}
+items=list(performance.items())
+
+for i in range(len(items)):
+    for j in range(i+1,len(items)):
+        if items[i][1] > items[j][1]:
+            items[i], items[j] = items[j], items[i]
+    
+sorted_dict=dict(items)
+
+print(sorted_dict)
